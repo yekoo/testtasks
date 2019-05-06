@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gusevky TT</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+	
+	<div id="potolok">
+		<div class="topBtns">
+			<div class="topBtn">Каталог</div>
+			<div class="topBtn">Активация</div>
+			<div class="topBtn">Вход</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<h1 class="content-header1">Витрина</h1>
+		<div class="filterBlocks">
+			<div class="filterBlock">
+				<select id="selSubj">
+				</select>
+			</div>
+			<div class="filterBlock">
+				<select id="selGenre">
+					<option>2</option>
+				</select>
+			</div>
+			<div class="filterBlock">
+				<select id="selClass">
+					<option>3</option>
+				</select>
+			</div>
+			<div class="filterBlock">
+				<input id="inpSearch">
+				</input>
+				<img id="searchBtn" src="img/search.png"/>
+			</div>
+		</div>
+		<div id="output"></div>
+		<div id="products"></div>
+	</div>
+
+	<div id="podval">
+		<div class="podvalcell" style="text-align:left;">1 2 3</div>
+		<div class="podvalcell" style="text-align:center;">4 5 6</div>
+		<div class="podvalcell" style="text-align:right;">7 8 9</div>
+	</div>
+
+
+	<script type="text/javascript">
+		//var call = $.ajax();
+		console.log("jQuery loaded!");
+		$(function(){
+			buildBooks(json);
+
+			$("#searchBtn").click(function(){
+
+			});
+		});
+
+		function updateUIsubj(product, allSubjects){
+			var subj = product.subject;
+			for(var i=0; i<allSubjects.length; i++){
+				if(allSubjects[i]==subj) break;
+			}
+			if(i==allSubjects.length){
+				console.log("subject added: "+subj);
+				allSubjects.push(subj);
+				$("#selSubj").append("<option>"+subj+"</option>");
+			}
+		}
+
+		function buildBooks(obj){
+			var items = obj.items;
+			var usedSubjects = [];
+			for(var i=0; i<items.length; i++){
+				updateUIsubj(items[i], usedSubjects);
+				var elem = $('<div class="productCont">'+items[i].title+'</div>');
+				$("#products").append(elem);
+				//$("#products").append('<div class="productCont">'+items[i].title+'</div>');
+			}
+		}
+
+</body>
+</html>
