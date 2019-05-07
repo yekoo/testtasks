@@ -33,13 +33,46 @@ html{
 .filterBlocks{
 }
 .filterBlock{
-	width:24%;
+	width:23%;
 	display:inline-block;
 	padding:5px;
 }
 select{
 	border-radius: 5px;
 	width:100%;
+}
+#products{
+	text-align:center;
+}
+.productCont{
+	width:170px;
+	height:270px;
+	border-radius:10px;
+	border:1px solid grey;
+	display:inline-block;
+	margin:0 15px 55px;
+	box-sizing:border-box;
+	font-size:12px;
+}
+.prod-info{
+	padding:10px 16px;
+}
+.prod-info div{
+	line-height:22px;
+	text-align:left;
+}
+.prod-title{}
+.prod-grade{}
+.prod-genre{}
+.prod-meta{}
+.prod-btn a{
+	background:#00c1ff;
+	display:block;
+	text-align:center;
+	border-radius:8px;
+	color:white;
+	text-decoration:none;
+	padding:1px 5px;
 }
 
 #podval{
