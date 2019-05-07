@@ -1,0 +1,53 @@
+html{
+	font-family:"Helvetic", "Calibry", "Arial";
+}
+#tasklist{
+	//display: none;
+	color:grey;
+}
+#potolok{
+	border-bottom: 2px solid grey;
+	padding:16px;
+	height:50px;
+	color:white;
+}
+.topBtns{
+	float: right;
+}
+.topBtn{
+	display:inline-block;
+	background: #00c0e7;
+	border-radius:8px;
+	width:120px;
+	padding:7px;
+	text-align:center;
+}
+.topBtn:hover{
+	background: linear-gradient(#00c0e7, #0000e7) !important;
+	cursor:pointer;
+}
+.content-header1{
+	text-align: center;
+	font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+.filterBlocks{
+}
+.filterBlock{
+	width:24%;
+	display:inline-block;
+	padding:5px;
+}
+select{
+	border-radius: 5px;
+	width:100%;
+}
+
+#podval{
+	background: #3c3c3c;
+	color:white;
+	height:36px;
+}
+.podvalcell{
+	display:inline-block;
+	width:33%;
+}
