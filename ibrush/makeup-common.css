@@ -1,0 +1,179 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-weight:bold;
+    color:#0062ff;
+    text-align: center;
+    font-family: "Monaco", "Consolas",'Courier New', Courier, monospace;
+}
+/*h3{*/
+h2{
+    margin-bottom: 0.5em;
+    font-family: "Monaco", "Consolas",'Courier New', Courier, monospace;
+    font-size: 28px;
+    font-weight: normal;
+}
+header h1{
+    text-align: center;
+    font-size: 3em;
+    font-weight: normal;
+}
+
+.centerColumn h2{
+    font-weight: normal;
+}
+.centerColumn{
+    max-width:740px;
+    margin:0 auto;
+    position:relative;
+    /*text-align: center;*/
+}
+.blockPicLabeled{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    /*padding:50px;*/
+    border-bottom: 1px solid #eee;
+}
+.scrollPan{
+    overflow: scroll;
+}
+.labelDateBlock{
+    font-family:'Times New Roman', Times, serif;
+    text-align:center;
+    position:absolute;
+    /* top:20px; */
+    bottom: 210px;
+    left:20px;
+    width:80px;
+    background:#fffa;
+    padding:10px;
+}
+.labelDateDate{          /*  ok  */
+    font-family:'Georgia';
+    font-size: 1.5em;
+}
+.labelDateTri{          /*  ok  */
+    position:absolute;//relative;
+    right:22px;
+    top:16px;
+}
+.labelDateMonth{          /*  ok  */
+    font-size: 1.2em;
+}
+.blockPicFigureCover{
+    padding:0 10px;
+    display:inline-block;
+}
+
+.sectionImg{
+    display:block;
+}
+.blockPicCaption{
+    margin-top:20px;
+    margin-bottom:20px;
+    /* font-style: italic; */
+    font-style: italic;
+}
+
+.blockText{
+    line-height: 150%;;
+}
+
+.blockQuotation{
+    display: flex;
+    flex-direction: row;
+    font-style: italic;
+}
+.blockQuotationIcon{
+    /*background-image: "./images/quotationIcon.png";*/
+    margin-right: 25px;
+    width: 34px;
+    height: 34px;
+    opacity: 0.25;
+}
+.blockQuotationText{
+}
+.blockQuotationAuthor{
+    color:grey;
+    margin-top:30px;
+}
+.advertSection{
+}
+.sectionGrey{
+     background: #ededed;
+}
+.advertBlock{
+     position:relative;
+     text-align: center;
+     left:0;
+     right:0;
+}
+.advertBlockCentered{
+    display: inline-block;
+     text-align:left;
+     position:relative;
+     margin:auto;
+     left:0;
+     right:0;
+}
+.advertTextLink{
+    margin-bottom: 16px;
+}
+
+.blockRateArticle{
+    /* background: #ededed; */
+}
+.blockRateStars{
+    display: inline-block;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    position: relative;
+    font-size: 30px;
+    font-family: "Times New Roman";
+}
+.blockRateStars > span{
+     display: inline-block;
+    cursor:pointer;
+    position: relative;
+    width:1.2em;
+    color:grey;
+}
+.blockRateStars > span:hover:before,
+.blockRateStars > span:hover ~ span::before{
+    content: "\2605";
+    position: absolute;
+    color:orange;
+}
+input, select{
+    font-size:20px;
+    width:100%;
+}
+.commentInputTextarea{
+    width:100%;
+    font-size:20px;
+    height:92px;
+}
+
+.blockSamePosts{
+    /* border:3px solid red; */
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin:-10px;
+    margin-top:0;
+}
+.blockSamePostsItem{
+    flex-direction: column;
+    display:flex;
+    margin:10px;
+    flex-grow: 1;
+}
+.blockSamePostsItemPic{
+
+}
+.blockSamePostsItemTitle{
+    font-family: "Monaco", "Consolas",'Courier New', Courier, monospace;
+    font-size:18px;
+}

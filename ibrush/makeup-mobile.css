@@ -1,0 +1,62 @@
+body{
+    padding:0;
+    margin:0; 
+}
+h1{
+}
+section{
+    margin:30px 0;
+    padding:30px 10px;
+    overflow:hidden;
+}
+
+.blockPicDated{
+    position: relative;
+}
+.booksToSelect{
+    position:relative;
+}
+.dateLabel{
+    position:absolute;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 15px;
+    background: red;
+    top:10px;
+    left:10px;
+}
+.blockPicFigure{
+    margin: 0 -10px;
+    order:2;
+    -webkit-order:2;
+}
+.blockPicCaption{
+    order:1;
+    -webkit-order:1;
+}
+.commentInputs{
+    display:flex;
+    flex-direction:column;
+    margin:20px;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+.commentInputText, .commentInputSelect{
+    margin:10px;
+    flex-grow:1;
+    width: unset;
+    display:inline-block;
+}
+.selOptGroup{
+    font-size: 22px;
+}
+.selOpt{
+    font-size: 32px;
+}
+/*.commentInputText{ 
+    flex-grow:1;
+    width:100%;
+}
+.commentInputSelect{
+    flex-grow:1;
+    width:100%;
+}*/
