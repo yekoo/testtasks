@@ -7,17 +7,25 @@ h1{
     text-align: center;
     font-family: "Monaco", "Consolas",'Courier New', Courier, monospace;
 }
-/*h3{*/
+
 h2{
+    margin-top: 1em;
     margin-bottom: 0.5em;
     font-family: "Monaco", "Consolas",'Courier New', Courier, monospace;
     font-size: 28px;
     font-weight: normal;
 }
+header{
+    margin:40px 0;
+}
 header h1{
     text-align: center;
     font-size: 3em;
     font-weight: normal;
+}
+
+.main{
+    box-sizing: border-box;
 }
 
 .centerColumn h2{
@@ -112,7 +120,7 @@ header h1{
 }
 .advertBlockCentered{
     display: inline-block;
-     text-align:left;
+     text-align:center;
      position:relative;
      margin:auto;
      left:0;
@@ -120,6 +128,7 @@ header h1{
 }
 .advertTextLink{
     margin-bottom: 16px;
+    text-align: left;
 }
 
 .blockRateArticle{
@@ -173,7 +182,9 @@ input, select{
 .blockSamePostsItemPic{
 
 }
-.blockSamePostsItemTitle{
+.blockSamePostsItemCaption{
     font-family: "Monaco", "Consolas",'Courier New', Courier, monospace;
-    font-size:18px;
+    font-size:21px;
+    text-align: left;
+    white-space: normal;
 }

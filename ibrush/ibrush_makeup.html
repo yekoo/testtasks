@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ТЗ HTML-верстальщика</title>
         <meta charset="utf-8">
+        <title>ТЗ HTML-верстальщика</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+        
         <link rel="stylesheet" media="screen" type="text/css" href="makeup-common.css"/>
         <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 767px)" type="text/css" href="makeup-mobile.css"/>
         <link rel="stylesheet" media="screen and (min-width: 768px)" type="text/css" href="makeup-desktop.css"/>
+        
     </head>
     <body>
         <header>
@@ -73,13 +79,10 @@
                 <div class="centerColumn">
                     <h2>Заключение</h2>
                     <div class="blockText">
-                        
-                        <!-- <div class="blockQuotationText"> -->
                             Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство диссонирует лирический субъект.
                             Абстрактное высказывание пространственно просветляет деструктивный символ. 
                             Ямб, несмотря на то, что все эти характерологические черты отсылают не к единому образу нарратора, интегрирует мифопоэтический хронотоп. 
                             Действительно, ударение приводит палимпсест. Контрапункт приводит ритм.
-                        <!-- </div> -->
                     </div>
                 </div>
             </section>
@@ -93,19 +96,19 @@
                     </div>
                     <h2>Добавить комментарий к книге</h2>
                     <div class="commentInputs">
-                        <input class="commentInputText" id="commentInputName" placeholder="Имя">
-                        <input class="commentInputText" id="commentInputEmail" placeholder="Email">
-                        <select style="" id="commentInputName">
+                        <input class="form-control mt-2 mb-2" id="commentInputName" placeholder="Имя">
+                        <input class="form-control m-2 mobileSideMarginFree" id="commentInputEmail" placeholder="Email">
+                        <select class="custom-select mt-2 mb-2" id="commentInputName">
                                 <option class="selOpt" value="book1">JavaScript ниндзя</option>
                                 <option class="selOpt" value="book2">Pragmatic Guide to JavaScript</option>
                                 <option class="selOpt" value="book3">Pro JavaScript Techniques</option>
                                 <option class="selOpt" value="book4">Выразительный JavaScript</option>
                         </select>
                     </div>
-                    <textarea class="commentInputTextarea" id="commentInputTextarea">
+                    <textarea class="form-control mt-2 mb-2" rows="4" id="commentInputTextarea">
 
                     </textarea>
-
+                    <button type="button" class="btn btn-primary">ОТПРАВИТЬ</button>
 
 
                     </div>
@@ -119,23 +122,29 @@
                     <h2>Похожие посты</h2>
                     <div class="blockSamePosts">
                         <div class="blockSamePostsItem">
-                            <img class="blockSamePostsItemPic" src="./images/post1.jpg"/>
-                            <div class="blockSamePostsItemTitle">
-                                События жизненного цикла ReactJS
+                            <div class="blockSamePostsItemContent">
+                                <img class="blockSamePostsItemPic" src="./images/post1.jpg"/>
+                                <div class="blockSamePostsItemCaption">
+                                    События жизненного цикла ReactJS
+                                </div>
                             </div>
                         </div>
 
                         <div class="blockSamePostsItem">
-                            <img class="blockSamePostsItemPic" src="./images/post2.jpg"/>
-                            <div class="blockSamePostsItemTitle">
-                                CSS Grids. Полное руководство
+                            <div class="blockSamePostsItemContent">
+                                <img class="blockSamePostsItemPic" src="./images/post2.jpg"/>
+                                <div class="blockSamePostsItemCaption">
+                                    CSS Grids. Полное руководство
+                                </div>
                             </div>
                         </div>
 
                         <div class="blockSamePostsItem">
-                            <img class="blockSamePostsItemPic" src="./images/post3.jpg"/>
-                            <div class="blockSamePostsItemTitle">
-                                Асинхронность в JavaScript
+                            <div class="blockSamePostsItemContent">
+                                <img class="blockSamePostsItemPic" src="./images/post3.jpg"/>
+                                <div class="blockSamePostsItemCaption">
+                                    Асинхронность в JavaScript
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -149,5 +158,13 @@
 
         </footer>
 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!--
+        <script src="./bootstrap-4.3.1-dist/js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="./bootstrap-4.3.1-dist/js/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        -->
     </body>
 </html>
