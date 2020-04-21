@@ -95,7 +95,6 @@ header h1{
     font-style: italic;
 }
 .blockQuotationIcon{
-    /*background-image: "./images/quotationIcon.png";*/
     margin-right: 25px;
     width: 34px;
     height: 34px;
@@ -131,9 +130,6 @@ header h1{
     text-align: left;
 }
 
-.blockRateArticle{
-    /* background: #ededed; */
-}
 .blockRateStars{
     display: inline-block;
     unicode-bidi: bidi-override;
@@ -155,18 +151,9 @@ header h1{
     position: absolute;
     color:orange;
 }
-input, select{
-    font-size:20px;
-    width:100%;
-}
-.commentInputTextarea{
-    width:100%;
-    font-size:20px;
-    height:92px;
-}
+
 
 .blockSamePosts{
-    /* border:3px solid red; */
     display:flex;
     flex-direction: row;
     justify-content:space-between;
@@ -180,7 +167,6 @@ input, select{
     flex-grow: 1;
 }
 .blockSamePostsItemPic{
-
 }
 .blockSamePostsItemCaption{
     font-family: "Monaco", "Consolas",'Courier New', Courier, monospace;

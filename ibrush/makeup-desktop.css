@@ -18,14 +18,3 @@ section{
     flex-direction: row;
     box-sizing: border-box;
 }
-.commentInputText, .commentInputSelect{
-    margin:10px;
-    flex-grow:1;
-    width:100%;
-}
-.selOptGroup{
-    font-size: 22px;;
-}
-.selOpt{
-    font-size: 32px;
-}
