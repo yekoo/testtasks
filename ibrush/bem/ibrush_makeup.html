@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ТЗ HTML-верстальщика</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+        
+        <link rel="stylesheet" media="screen" type="text/css" href="makeup-common.css"/>
+        <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 767px)" type="text/css" href="makeup-mobile.css"/>
+        <link rel="stylesheet" media="screen and (min-width: 768px)" type="text/css" href="makeup-desktop.css"/>
+        
+    </head>
+    <body>
+        <header>
+            <div class="center-column">
+                <h1>Путь JavaScript</h1>
+            </div>
+        </header>
+
+        <main class="b-main">
+
+
+            <section class="section-item">
+                <div class="center-column">
+                    <div class="figure-labeled">
+                        <div class="figure-labeled_image ">
+                            <div class="figure_label-date">
+                                <div class="label-date_number">12</div>
+                                <div class="label-date_arrow">&#9656;</div>
+                                <div class="label-date_month">апреля</div>
+                            </div>
+
+                            <div class="figure_scroll-pane">
+                                <div class="figure-labeled_image-cover">
+                                        <img class="figure-labeled_image-img" src="images/books.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <figcaption class="figure-labeled_image-caption">Можно выделить три основных направления для прогресса JavaScript</figcaption> 
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-item">
+                <div class="center-column">
+                    <h2>Серверный JavaScript</h2>
+                    <div class="section_block-quotation block-text">
+                        <div class="block-quotation_icon-place">
+                            <img src="images/quotationIcon.png" class="block-quotation_icon"/>
+                        </div>
+                        <div class="block-quotation_text">
+                            Разработчики и клиенты часто неправильно понимают, что такое система. Они видят графический интерфейс и думают, что он и есть система. 
+                            Они определяют систему в терминах графического интерфейса и считают, что должны сразу начать работу с графическим интерфейсом. 
+                            Они не понимают важнейшего принципа: ввод/вывод не важен.
+                            <div class="block-quotation_author">&mdash; Р. Мартин</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-item advert-section section-grey">
+                <div class="center-column">
+                    <div class="advert-block">
+                        <div class="advert-block_content-centered">
+                            <div class="advert_text-link">
+                                Реклама на <a class="advert-block_link-text" href="http://blabla.com">blabla.com</a>
+                            </div>
+                            <a class="advert-block_link-figure" href="http://blabla.com">
+                                <img class="advert-block_figure" src="./images/advert_books_01.jpg"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+
+            <section class="section-item">
+                <div class="center-column">
+                    <h2>Заключение</h2>
+                    <div class="block-text">
+                            Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство диссонирует лирический субъект.
+                            Абстрактное высказывание пространственно просветляет деструктивный символ. 
+                            Ямб, несмотря на то, что все эти характерологические черты отсылают не к единому образу нарратора, интегрирует мифопоэтический хронотоп. 
+                            Действительно, ударение приводит палимпсест. Контрапункт приводит ритм.
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-item section-rate-form section-grey">
+                <div class="center-column">
+                    <h2>Оцените статью</h2>
+                    <div class="block-rate-stars">
+                        <span>&star;</span><span>&star;</span><span>&star;</span><span>&star;</span><span>&star;</span>
+                    </div>
+                    <h2>Добавить комментарий к книге</h2>
+                    <div class="rate-form_inputs-mesh">
+                        <input class="inputs-mesh_input-text form-control mt-2 mb-2" placeholder="Имя">
+                        <input class="inputs-mesh_input-text form-control m-2 inputs-mesh_input-middle" id="commentInputEmail" placeholder="Email">
+                        <select class="mes_combobox custom-select mt-2 mb-2" >
+                                <option value="book1">JavaScript ниндзя</option>
+                                <option value="book2">Pragmatic Guide to JavaScript</option>
+                                <option value="book3">Pro JavaScript Techniques</option>
+                                <option value="book4">Выразительный JavaScript</option>
+                        </select>
+                    </div>
+                    <textarea class="form-control mt-2 mb-2" rows="4" >
+
+                    </textarea>
+                    <button type="button" class="btn btn-primary">ОТПРАВИТЬ</button>
+                </div>
+            </section>
+        
+            <section class="section-item">
+                <div class="center-column">
+                    <h2>Похожие посты</h2>
+                    <div class="block-same-posts">
+                        <div class="block-same-posts_item">
+                            <div class="same-posts-item_content">
+                                <img class="same-posts-item_content-pic" src="./images/post1.jpg"/>
+                                <div class="same-posts-item_caption">
+                                    События жизненного цикла ReactJS
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-same-posts_item">
+                            <div class="same-posts-item_content">
+                                <img class="same-posts-item_content-pic" src="./images/post2.jpg"/>
+                                <div class="same-posts-item_caption">
+                                    CSS Grids. Полное руководство
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-same-posts_item">
+                            <div class="same-posts-item_content">
+                                <img class="same-posts-item_content-pic" src="./images/post3.jpg"/>
+                                <div class="same-posts-item_caption">
+                                    Асинхронность в JavaScript
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="block-same-posts_item">
+                            <div class="same-posts-item_content">
+                                <img class="same-posts-item_content-pic" src="./images/post3.jpg"/>
+                                <div class="same-posts-item_caption">
+                                    Асинхронность в JavaScript
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-same-posts_item">
+                            <div class="same-posts-item_content">
+                                <img class="same-posts-item_content-pic" src="./images/post3.jpg"/>
+                                <div class="same-posts-item_caption">
+                                    Асинхронность в JavaScript
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </main>
+        <footer>
+
+        </footer>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--         
+        <script src="./bootstrap-4.3.1-dist/js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="./bootstrap-4.3.1-dist/js/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+         -->
+    </body>
+</html>

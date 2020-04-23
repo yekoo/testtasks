@@ -1,0 +1,84 @@
+body{
+    padding:0;
+    margin:0; 
+}
+.section-item{
+    margin:30px 0;
+    padding:30px 20px;
+    overflow:hidden;
+}
+button{
+    width:100%;
+}
+
+.blockPicDated{
+    position: relative;
+}
+.booksToSelect{
+    position:relative;
+}
+
+.figure-labeled_image{
+    margin: 0 -10px;
+    order:2;
+    -webkit-order:2;
+}
+.figure-labeled_image-caption{
+    position:relative;
+    order:1;
+    -webkit-order:1;
+}
+.figure_scroll-pane{
+    overflow: scroll;
+}
+.rate-form_inputs-mesh{
+    display:flex;
+    flex-direction:column;
+    //margin:20px;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+.inputs-mesh_input-middle{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
+
+.block-same-posts{
+    display: block;
+    background-size: 400px 400px;
+    width: 100vw;
+    min-height: 320px;/*100vh;*/
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: mandatory;
+    scroll-snap-destination: 0% 100%;
+    scroll-snap-points-x: repeat(100%);
+}
+
+.block-same-posts_item{
+    text-align:center;
+    scroll-snap-align: center;
+    position:relative;
+    width:100vw;
+    display: inline-block;
+    vertical-align: top;
+    font-size: initial;
+}
+.same-posts-item_content{
+    width:300px;
+    position:relative;
+    margin:auto;
+    left:0;
+    right:0;
+}
+
+.same-posts-item_content-pic{
+    width:226px;
+    height:240px;
+    color:white;
+}

@@ -1,0 +1,44 @@
+h1{
+}
+.section-item{
+    margin:30px 0;
+    padding:30px 0;
+}
+
+.figure-labeled_image{
+    order:1;
+    display: flex;
+}
+.figure-labeled_image-caption{
+    order:2;
+    display: flex;
+}
+
+.rate-form_inputs-mesh{
+    display:flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.block-same-posts{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin:-10px;
+    margin-top:0;
+    overflow:scroll;
+}
+.block-same-posts_item{
+    flex-direction: column;
+    display:flex;
+    margin:10px;
+    flex-grow: 1;
+}
+.same-posts-item_content-pic{
+}
+.same-posts-item_caption{
+    font-family: "Monaco", "Consolas",'Courier New', Courier, monospace;
+    font-size:21px;
+    text-align: left;
+    white-space: normal;
+}
