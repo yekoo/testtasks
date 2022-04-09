@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performia - TT</title>
+
+    <style>
+        @import url("https://rsms.me/inter/inter.css");
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+
+        @supports (font-variation-settings: normal) {
+            html {
+                font-family: 'Inter var', sans-serif;
+            }
+        }
+
+        body {
+            background: #283241;
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            height: 90vh;
+            width: 100vw;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+        }
+
+        .main-bg > .figure {
+            width: 100%;
+        }
+
+        .main-bg > .fade {
+            background: -webkit-gradient(linear, left top, left bottom, from(#283241), color-stop(50%, #28324100), to(#283241));
+            background: linear-gradient(180deg, #283241, #28324100 50%, #283241);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .main-bg {
+            position: relative;
+            opacity: 0.18;
+        }
+
+        .main-mesh {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 50% 50%;
+                grid-template-columns: 50% 50%;
+            -ms-grid-rows: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+            -ms-grid-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+            position: absolute;
+            margin: auto;
+            width: 100%;
+            row-gap: 0;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            height: 480px;
+            height: 550px;
+        }
+
+        .mesh-img {
+            position: absolute;
+        }
+
+        .mesh-img--tl {
+            right: 0;
+            bottom: 0;
+            margin-bottom: -2px;
+        }
+
+        .mesh-img--tr {
+            left: 0;
+            bottom: 0;
+            margin-bottom: -2px;
+        }
+
+        .mesh-img--bl {
+            right: 0;
+        }
+
+        .mesh-img--br {
+            left: 0;
+        }
+
+        .sector:nth-child(odd) {
+            -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                    justify-content: end;
+            text-align: right;
+            margin-right: -3px;
+        }
+
+        .sector-line-tl {
+            position: absolute;
+            right: 150px;
+            bottom: 110px;
+        }
+
+        .sector-line-tr {
+            position: absolute;
+            left: 150px;
+            bottom: 110px;
+        }
+
+        .sector-line-bl {
+            position: absolute;
+            right: 150px;
+            top: 120px;
+        }
+
+        .sector-line-br {
+            position: absolute;
+            left: 150px;
+            top: 120px;
+        }
+
+        .sector {
+            position: relative;
+            height: 240px;
+        }
+
+        .sector .mesh-img {
+            -webkit-transition: -webkit-transform 0.5s, -webkit-filter 0.2s;
+            transition: -webkit-transform 0.5s, -webkit-filter 0.2s;
+            transition: transform 0.5s, filter 0.2s;
+            transition: transform 0.5s, filter 0.2s, -webkit-transform 0.5s, -webkit-filter 0.2s;
+        }
+
+        .sector .mesh-texts {
+            font-family: Inter;
+            bottom: 70px;
+            width: 400px;
+            position: absolute;
+            color: white;
+            -webkit-transition: max-height 0.7s ease-in-out;
+            transition: max-height 0.7s ease-in-out;
+        }
+
+        .sector .mesh-texts h2 {
+            font-weight: 500;
+            font-size: 25.505px;
+            color: #D7B46A;
+        }
+
+        .sector .mesh-texts h2 .sector-num {
+            color: white;
+        }
+
+        .sector .mesh-texts .sector-descr {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 140%;
+            max-height: 1px;
+            overflow: hidden;
+            -webkit-transition: max-height 0.7s ease-in-out;
+            transition: max-height 0.7s ease-in-out;
+        }
+
+        .last-sector {
+            -ms-grid-column-span: 2;
+                grid-column-end: span 2;
+            margin: 0;
+            text-align: center;
+            height: 72px;
+        }
+
+        .last-sector .mesh-texts {
+            bottom: 0;
+            left: auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        .sector:nth-child(1) .mesh-texts {
+            bottom: 180px;
+            right: 157px;
+            text-align: left;
+        }
+
+        .sector:nth-child(2) .mesh-texts {
+            bottom: 180px;
+            left: 157px;
+            text-align: right;
+        }
+
+        .sector:nth-child(2) .sector-link {
+            position: absolute;
+            left: 316px;
+            bottom: 126px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            color: #34A4D3;
+        }
+
+        .sector:nth-child(2) .sector-link:hover, .sector:nth-child(2) .sector-link:visited {
+            -webkit-filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+                    filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+        }
+
+        .sector:nth-child(3) .mesh-texts {
+            bottom: 70px;
+            right: 157px;
+            text-align: left;
+        }
+
+        .sector:nth-child(4) .mesh-texts {
+            bottom: 70px;
+            left: 157px;
+            text-align: right;
+        }
+
+        .sector:nth-child(4) .sector-link {
+            position: absolute;
+            left: 316px;
+            top: 200px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            color: #34A4D3;
+        }
+
+        .sector:nth-child(4) .sector-link:hover, .sector:nth-child(4) .sector-link:visited {
+            -webkit-filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+                    filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+        }
+
+        .sector:hover:nth-child(1) .mesh-img {
+            -webkit-filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+                    filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+            -webkit-transform: translate(-7px, -7px);
+                    transform: translate(-7px, -7px);
+        }
+
+        .sector:hover:nth-child(1) .mesh-texts .sector-descr {
+            max-height: 200px;
+        }
+
+        .sector:hover:nth-child(2) .mesh-img {
+            -webkit-filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+                    filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+            -webkit-transform: translate(7px, -7px);
+                    transform: translate(7px, -7px);
+        }
+
+        .sector:hover:nth-child(2) .mesh-texts .sector-descr {
+            max-height: 200px;
+        }
+
+        .sector:hover:nth-child(3) .mesh-img {
+            -webkit-filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+                    filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+            -webkit-transform: translate(-7px, 7px);
+                    transform: translate(-7px, 7px);
+        }
+
+        .sector:hover:nth-child(3) .mesh-texts .sector-descr {
+            max-height: 200px;
+        }
+
+        .sector:hover:nth-child(4) .mesh-img {
+            -webkit-filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+                    filter: brightness(1.89) saturate(1.5) hue-rotate(-13deg);
+            -webkit-transform: translate(7px, 7px);
+                    transform: translate(7px, 7px);
+        }
+
+        .sector:hover:nth-child(4) .mesh-texts .sector-descr {
+            max-height: 200px;
+        }
+
+        .sector:hover:nth-child(5) .mesh-texts .sector-descr {
+            max-height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="main-bg">
+            <img class="figure" src="assets/main-bg.png" alt="bg"/>
+            <div class="fade"></div>
+        </div>
+    
+        <div class="main-mesh">
+            <div class="sector">
+                <img class="mesh-img mesh-img--tl" src="assets/01.svg"/>
+                <div class="mesh-texts">
+                    <h2><span class=sector-num>01</span> Продуктивность</h2>
+                    <div class="sector-descr">
+                        Выявление особо склонных к продуктивности и эффективности людей при помощи авторского интервью, проверенном на 2 000 000 кандидатов
+                    </div>
+                </div>
+                <svg width="410" height="60" class="sector-line-tl">
+                    <path d="M0 0 L380 0 L410 60" stroke="white"
+                  stroke-width="1" fill="none"/>
+                </svg>
+            </div>
+
+            <div class="sector">
+                <img class="mesh-img mesh-img--tr" src="assets/02.svg"/>
+                <div class="mesh-texts">
+                    <h2><span class=sector-num>02</span> Личностные качества</h2>
+                    <div class="sector-descr">
+                        Выявление особо склонных к продуктивности и эффективности людей при помощи авторского интервью, проверенном на 2 000 000 кандидатов
+                    </div>
+                </div>
+                <svg width="410" height="60" class="sector-line-tr">
+                    <path d="M0 60 L30 0 L410 0" stroke="white"
+                  stroke-width="1" fill="none"/>
+                </svg>
+                <a href="#" class="sector-link">
+                    <img src="./assets/i_icon.svg"> Посмотреть пример отчета
+                </a>
+            </div>
+
+            <div class="sector">
+                <img class="mesh-img mesh-img--bl" src="assets/03.svg"/>
+                <div class="mesh-texts">
+                    <h2><span class=sector-num>03</span> Прфессиональные знания</h2>
+                    <div class="sector-descr">
+                        Выявление особо склонных к продуктивности людей при помощи авторского интервью
+                    </div>
+                </div>
+                <svg width="410" height="60" class="sector-line-bl">
+                    <path d="M0 60 L380 60 L410 0" stroke="white"
+                  stroke-width="1" fill="none"/>
+                </svg>
+            </div>
+
+            <div class="sector">
+                <img class="mesh-img mesh-img--br" src="assets/04.svg"/>
+                <div class="mesh-texts">
+                    <h2><span class=sector-num>04</span> Мотивация</h2>
+                    <div class="sector-descr">
+                        Выявление особо склонных к продуктивности и эффективности людей при помощи авторского интервью, проверенном на 2 000 000 кандидатов
+                    </div>
+                </div>
+                <svg width="410" height="60" class="sector-line-br">
+                    <path d="M0 0 L30 60 L410 60" stroke="white"
+                  stroke-width="1" fill="none"/>
+                </svg>
+                <a href="#" class="sector-link">
+                    <img src="./assets/i_icon.svg"> Посмотреть пример отчета
+                </a>
+            </div>
+            <div class="sector last-sector">
+                <div class="mesh-texts">
+                    <h2><span class=sector-num>05</span> Наведение справок</h2>
+                    <div class="sector-descr">
+                        Выявление особо склонных к продуктивности и эффективности людей при помощи авторского интервью, проверенном на 2 000 000 кандидатов
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
